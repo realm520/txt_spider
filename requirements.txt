@@ -1,0 +1,21 @@
+# Web Scraping Framework
+scrapy
+
+# Interactive Web Scraping
+scrapy-selenium
+scrapy-splash
+
+# Data Storage
+SQLAlchemy
+
+# Task Queue
+celery
+
+# Real-time Status Display
+fastapi
+
+# Logging
+loguru
+
+# Testing Framework
+pytest

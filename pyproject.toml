@@ -1,0 +1,21 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "txt_spider"
+version = "0.1.0"
+description = "Personal spider project for study."
+authors = ["HarryZ <realm520@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scrapy = "^2.5"
+scrapy-selenium = "^0.0.7"
+scrapy-splash = "^0.8"
+SQLAlchemy = "^1.4"
+celery = "^5.1"
+fastapi = "^0.68"
+loguru = "^0.5"
+pytest = "^6.2"
+

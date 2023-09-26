@@ -98,27 +98,41 @@ txt_spider/
 |-- db_models/
 |   |-- __init__.py
 |   |-- example_model.py
-|-- util/
+|-- utils/
 |   |-- __init__.py
 |   |-- common_utils.py
+|-- tests/
 |-- docker-compose.yml
 |-- .gitlab-ci.yml (or Jenkinsfile or .github/workflows)
 ```
 
-## Usage Instructions
+## Usage
 
 ### Installation, Running, and Usage
 
-1. Clone the repository: `git clone <repository_url>`
+1. Clone the repository: `git clone https://github.com/realm520/txt_spider.git`
 2. Navigate to the project directory: `cd txt_spider`
 3. Install dependencies: `pip install -r requirements.txt`
-4. Run a spider: `scrapy crawl example_spider`
+4. Run a spider: `scrapy crawl singaporepool`
 
 ### Development Environment, Packaging, and Deployment
 
-1. Set up a virtual environment: `python3 -m venv venv`
-2. Activate the virtual environment: `source venv/bin/activate` (Linux/Mac) or `venv\Scripts\activate` (Windows)
-3. Install development dependencies: `pip install -r requirements-dev.txt`
+1. Install `poetry`
+2. Install development dependencies: `poetry install`
+3. Enter venv: `poetry shell`
 4. Package the application: `python setup.py sdist bdist_wheel`
 5. Deploy using Docker: `docker-compose up`
 
+### Add new spider
+
+1. Generate spider file by scrapy
+```
+scrapy genspider singaporepool "https://online.singaporepools.com/cn/sports/category/1/football"
+```
+
+## Update Component
+
+### Update chromedriver
+
+1. Download from https://googlechromelabs.github.io/chrome-for-testing/
+2. Replace zip file under "bin" directory
