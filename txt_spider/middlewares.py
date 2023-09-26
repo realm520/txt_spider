@@ -3,7 +3,12 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+from selenium import webdriver
+from scrapy.http import HtmlResponse
+import time
+
 from scrapy import signals
+from settings import SELENIUM_BROWSER_EXECUTABLE_PATH, SELENIUM_DRIVER_EXECUTABLE_PATH, SELENIUM_DRIVER_ARGUMENTS
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
@@ -101,3 +106,15 @@ class TxtSpiderDownloaderMiddleware:
 
     def spider_opened(self, spider):
         spider.logger.info("Spider opened: %s" % spider.name)
+
+
+class SeleniumMiddleware:
+    def __init__(self):
+        self.driver = webdriver.Chrome(
+            executable_path=SELENIUM_DRIVER_EXECUTABLE_PATH)  # Replace with your ChromeDriver path
+
+    def process_request(self, request, spider):
+        self.driver.get(request.url)
+        time.sleep(2)  # Wait for JavaScript to load
+        body = self.driver.page_source
+        return HtmlResponse(self.driver.current_url, body=body, encoding='utf-8', request=request)

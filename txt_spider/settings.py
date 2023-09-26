@@ -11,13 +11,9 @@
 from shutil import which
 
 SELENIUM_DRIVER_NAME = 'chrome'
-SELENIUM_DRIVER_EXECUTABLE_PATH = which('chromedriver')
+SELENIUM_DRIVER_EXECUTABLE_PATH = "C:\\Users\\harry\\code\\txt_spider\\bin\\chromedriver-win64\\chromedriver.exe" #which('chromedriver')
 SELENIUM_DRIVER_ARGUMENTS = ['--headless']
-SELENIUM_BROWSER_EXECUTABLE_PATH = which('chrome')
-
-DOWNLOADER_MIDDLEWARES = {
-    'scrapy_selenium.SeleniumMiddleware': 800
-}
+SELENIUM_BROWSER_EXECUTABLE_PATH = "C:\\Users\\harry\\code\\txt_spider\\bin\\chrome-win64\\chrome.exe" #which('chrome')
 
 
 BOT_NAME = "txt_spider"

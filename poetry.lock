@@ -1173,21 +1173,6 @@ w3lib = ">=1.17.0"
 "zope.interface" = ">=5.1.0"
 
 [[package]]
-name = "scrapy-selenium"
-version = "0.0.7"
-description = "Scrapy with selenium"
-optional = false
-python-versions = "*"
-files = [
-    {file = "scrapy-selenium-0.0.7.tar.gz", hash = "sha256:51f809802a1f62ed852cfe2d2ed49f6141058cc5254ed4b448d2ffe6f7a1b6e9"},
-    {file = "scrapy_selenium-0.0.7-py3-none-any.whl", hash = "sha256:70766315c7970b12a142e1b7a9f43ffb3ef1260891811062ec9dd46a665d935a"},
-]
-
-[package.dependencies]
-scrapy = ">=1.0.0"
-selenium = ">=3.9.0"
-
-[[package]]
 name = "scrapy-splash"
 version = "0.8.0"
 description = "JavaScript support for Scrapy using Splash"
@@ -1200,13 +1185,13 @@ files = [
 
 [[package]]
 name = "selenium"
-version = "4.12.0"
+version = "4.13.0"
 description = ""
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "selenium-4.12.0-py3-none-any.whl", hash = "sha256:b2c48b1440db54a0653300d9955f5421390723d53b36ec835e18de8e13bbd401"},
-    {file = "selenium-4.12.0.tar.gz", hash = "sha256:95be6aa449a0ab4ac1198bb9de71bbe9170405e04b9752f4b450dc7292a21828"},
+    {file = "selenium-4.13.0-py3-none-any.whl", hash = "sha256:f0f9185c01ae249a321529c4e3aa0edc2a900642e61fdbb76988cd72d2762ece"},
+    {file = "selenium-4.13.0.tar.gz", hash = "sha256:3c413a4f1b8af67824703195e3b1c19cfb1c3186c799efa035d55fd59d6dd59f"},
 ]
 
 [package.dependencies]
@@ -1655,4 +1640,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ce7d123efbf2f1357d33764fb5bbe1d488f331561538da17737330af01d58c40"
+content-hash = "e9ba6eb874ba8eae9f11f5c8914efac7a991da4a881f56e7bdd1176dec315121"
